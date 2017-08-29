@@ -163,8 +163,8 @@ do
     else
     	CHKSUM_PREV=0
 	fi
-    ## download the files via HTTP (no need for https), using time-stamping, -nd no host directories
-    wget  -t 30 --no-verbose -r -N -nd http://www.ian.com/affiliatecenter/include/V2/$FILE.zip
+    ## download the files via HTTPS, using time-stamping, -nd no host directories
+    wget  -t 30 --no-verbose -r -N -nd https://www.ian.com/affiliatecenter/include/V2/$FILE.zip
 	## unzip the files, save the exit value to check for errors
 	## BSD does not support same syntax, but there is no need in MAC OS as Linux (unzip -L `find -iname $FILE.zip`)
     unzip -L -o $FILE.zip
